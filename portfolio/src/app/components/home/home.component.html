@@ -312,23 +312,56 @@
 
           <input
             matInput
-            formControlName="email"
+            formControlName="from"
             placeholder="email@gmail.com"
           />
 
           <mat-error
-            *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched"
+            *ngIf="form.get('from')?.hasError('required') && form.get('from')?.touched"
           >
             Email is required.
           </mat-error>
 
           <mat-error
             *ngIf="
-              form.get('email')?.hasError('email') &&
-              form.get('email')?.touched
+              form.get('from')?.hasError('email') &&
+              form.get('from')?.touched
             "
           >
             Invalid email address.
+          </mat-error>
+          
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Subject</mat-label>
+
+          <input
+            matInput
+            formControlName="subject"
+            placeholder="e.g. Job Opportunity"
+          />
+
+          <mat-error
+            *ngIf="form.get('subject')?.hasError('required') && form.get('subject')?.touched"
+          >
+            Subject is required.
+          </mat-error>
+
+                    <mat-error
+            *ngIf="form.get('subject')?.hasError('minlength') &&
+              form.get('subject')?.touched"
+          >
+            Subject must be at least 5 characters.
+          </mat-error>
+
+          <mat-error
+            *ngIf="
+              form.get('subject')?.hasError('maxlength') &&
+              form.get('subject')?.touched
+            "
+          >
+            Subject cannot exceed 100 characters.
           </mat-error>
         </mat-form-field>
 
