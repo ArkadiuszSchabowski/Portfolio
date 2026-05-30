@@ -293,124 +293,134 @@
       </div>
     </div>
   </section>
- <section id="contact">
-  <div class="title" class="card-title-contact">Contact</div>
+  <section id="contact">
+    <div class="title" class="card-title-contact">Contact</div>
 
-  <form
-    id="form-component"
-    [formGroup]="form"
-    (ngSubmit)="sendEmail()"
-    autocomplete="off"
-  >
-    <mat-card class="home">
-      <mat-card-title id="card-title">Send Email</mat-card-title>
+    <form
+      id="form-component"
+      [formGroup]="form"
+      (ngSubmit)="sendEmail()"
+      autocomplete="off"
+    >
+      <mat-card class="home">
+        <mat-card-title id="card-title">Send Email</mat-card-title>
 
-      <mat-card-content class="home">
+        <mat-card-content class="home">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Your email</mat-label>
 
-        <mat-form-field appearance="outline" class="form-field">
-          <mat-label>Your email</mat-label>
+            <input
+              matInput
+              formControlName="from"
+              placeholder="email@gmail.com"
+            />
 
-          <input
-            matInput
-            formControlName="from"
-            placeholder="email@gmail.com"
-          />
+            <mat-error
+              *ngIf="
+                form.get('from')?.hasError('required') &&
+                form.get('from')?.touched
+              "
+            >
+              Email is required.
+            </mat-error>
 
-          <mat-error
-            *ngIf="form.get('from')?.hasError('required') && form.get('from')?.touched"
-          >
-            Email is required.
-          </mat-error>
+            <mat-error
+              *ngIf="
+                form.get('from')?.hasError('email') && form.get('from')?.touched
+              "
+            >
+              Invalid email address.
+            </mat-error>
+          </mat-form-field>
 
-          <mat-error
-            *ngIf="
-              form.get('from')?.hasError('email') &&
-              form.get('from')?.touched
-            "
-          >
-            Invalid email address.
-          </mat-error>
-          
-        </mat-form-field>
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Subject</mat-label>
 
-        <mat-form-field appearance="outline" class="form-field">
-          <mat-label>Subject</mat-label>
+            <input
+              matInput
+              formControlName="subject"
+              placeholder="e.g. Job Opportunity"
+            />
 
-          <input
-            matInput
-            formControlName="subject"
-            placeholder="e.g. Job Opportunity"
-          />
+            <mat-error
+              *ngIf="
+                form.get('subject')?.hasError('required') &&
+                form.get('subject')?.touched
+              "
+            >
+              Subject is required.
+            </mat-error>
 
-          <mat-error
-            *ngIf="form.get('subject')?.hasError('required') && form.get('subject')?.touched"
-          >
-            Subject is required.
-          </mat-error>
+            <mat-error
+              *ngIf="
+                form.get('subject')?.hasError('minlength') &&
+                form.get('subject')?.touched
+              "
+            >
+              Subject must be at least 5 characters.
+            </mat-error>
 
-                    <mat-error
-            *ngIf="form.get('subject')?.hasError('minlength') &&
-              form.get('subject')?.touched"
-          >
-            Subject must be at least 5 characters.
-          </mat-error>
+            <mat-error
+              *ngIf="
+                form.get('subject')?.hasError('maxlength') &&
+                form.get('subject')?.touched
+              "
+            >
+              Subject cannot exceed 100 characters.
+            </mat-error>
+          </mat-form-field>
 
-          <mat-error
-            *ngIf="
-              form.get('subject')?.hasError('maxlength') &&
-              form.get('subject')?.touched
-            "
-          >
-            Subject cannot exceed 100 characters.
-          </mat-error>
-        </mat-form-field>
+          <mat-form-field appearance="outline" class="message">
+            <mat-label>Message</mat-label>
 
-        <mat-form-field appearance="outline" class="message">
-          <mat-label>Message</mat-label>
+            <textarea
+              class="home"
+              matInput
+              rows="6"
+              formControlName="message"
+              placeholder="Your message..."
+            ></textarea>
 
-          <textarea class="home"
-            matInput
-            rows="6"
-            formControlName="message"
-            placeholder="Your message..."
-          ></textarea>
+            <mat-error
+              *ngIf="
+                form.get('message')?.hasError('required') &&
+                form.get('message')?.touched
+              "
+            >
+              Message is required.
+            </mat-error>
 
-          <mat-error
-            *ngIf="form.get('message')?.hasError('required') &&
-              form.get('message')?.touched"
-          >
-            Message is required.
-          </mat-error>
+            <mat-error
+              *ngIf="
+                form.get('message')?.hasError('minlength') &&
+                form.get('message')?.touched
+              "
+            >
+              Message must be at least 10 characters.
+            </mat-error>
 
-          <mat-error
-            *ngIf="form.get('message')?.hasError('minlength') &&
-              form.get('message')?.touched"
-          >
-            Message must be at least 10 characters.
-          </mat-error>
+            <mat-error
+              *ngIf="
+                form.get('message')?.hasError('maxlength') &&
+                form.get('message')?.touched
+              "
+            >
+              Message cannot exceed 1000 characters.
+            </mat-error>
+          </mat-form-field>
 
-          <mat-error
-            *ngIf="
-              form.get('message')?.hasError('maxlength') &&
-              form.get('message')?.touched
-            "
-          >
-            Message cannot exceed 1000 characters.
-          </mat-error>
-        </mat-form-field>
-
-        <div id="submit-button-container">
-          <button
-            id="submit-button"
-            mat-flat-button
-            type="submit"
-          >
-            Send
-          </button>
-        </div>
-
-      </mat-card-content>
-    </mat-card>
-  </form>
-</section>
+          <div id="submit-button-container">
+            <button
+              id="submit-button"
+              mat-flat-button
+              type="submit"
+              [disabled]="isSending"
+            >
+              {{ isSending ? "Sending..." : "Send" }}
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </section>
 </div>
