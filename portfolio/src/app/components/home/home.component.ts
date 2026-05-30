@@ -60,6 +60,10 @@ export class HomeComponent {
   }
 
   sendEmail() {
+    Object.values(this.form.controls).forEach((control) => {
+      control.updateValueAndValidity();
+    });
+
     if (this.form.invalid || this.isSending) {
       this.form.markAllAsTouched();
       return;
