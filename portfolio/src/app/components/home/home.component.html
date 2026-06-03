@@ -1,47 +1,53 @@
 <div id="home-container">
   <section id="hero">
-    <div id="hero-title">Arkadiusz Schabowski</div>
+    <div id="hero-orange-background">
+      <div id="button-menu-container">
+        <button [matMenuTriggerFor]="menu" id="button-menu">
+          <div class="icon-wrapper">
+            <mat-icon id="mat-menu-icon">menu</mat-icon>
+          </div>
+        </button>
 
-    <div id="hero-subtitle">
-      Full-Stack Developer specializing in .NET and Java backend development
-      with Angular frontend applications.
+        <mat-menu #menu="matMenu">
+          <a class="navbar-mobile-button" mat-menu-item href="#projects"
+            >Projects</a
+          >
+          <a class="navbar-mobile-button" mat-menu-item href="#contact"
+            >Contact</a
+          >
+        </mat-menu>
+      </div>
     </div>
+    <div id="hero-dark-background">
+      <div id="hero-title-specialization">Full-Stack Developer</div>
+      <div id="hero-title">Arkadiusz Schabowski</div>
+      <div id="hero-subtitle">
+        Full-Stack Developer specializing in .NET and Java backend development
+        with Angular frontend applications.
+      </div>
+      <div id="hero-external-buttons">
+        <a
+          id="github-button"
+          class="hero-button"
+          href="https://github.com/ArkadiuszSchabowski"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
 
-    <div id="hero-tech-stack">
-      <span class="hero-tech-stack-item">C# / .NET</span>
-      <span class="hero-tech-stack-item">ASP.NET Core</span>
-      <span class="hero-tech-stack-item">Java</span>
-      <span class="hero-tech-stack-item">REST APIs</span>
-      <span class="hero-tech-stack-item">Angular</span>
-      <span class="hero-tech-stack-item">Docker</span>
+        <a
+          id="linkedin-button"
+          class="hero-button"
+          href="https://linkedin.com/in/arkadiusz-schabowski"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+      </div>
     </div>
-
-    <div id="hero-buttons">
-      <a
-        class="hero-button"
-        mat-raised-button
-        href="https://github.com/ArkadiuszSchabowski"
-        target="_blank"
-      >
-        GitHub
-      </a>
-
-      <a
-        class="hero-button"
-        mat-raised-button
-        href="https://linkedin.com/in/arkadiusz-schabowski"
-        target="_blank"
-      >
-        LinkedIn
-      </a>
-      <a class="hero-button" mat-raised-button href="#projects"> Projects </a>
-
-      <a class="hero-button" mat-raised-button href="#contact"> Contact </a>
-    </div>
+    <div id="hero-avatar" alt="Arkadiusz Schabowski"></div>
   </section>
   <section id="about-me">
     <div class="title">About Me</div>
-    <div class="description">
+    <div id="about-me-description" class="description">
       Full-stack developer specializing in .NET, Angular and microservices-based
       applications. I focus on building scalable backend systems, REST APIs and
       modern frontend applications with an emphasis on clean architecture,
@@ -53,7 +59,10 @@
   <section id="projects">
     <div class="title">Projects</div>
     <div id="sport-reserve" class="project">
-      <div class="project-name">Sport Reserve</div>
+      <div class="project-name">
+        Sport Reserve - search for interesting races, register for events, and
+        manage your sports calendar.
+      </div>
       <div class="project-links">
         <a
           class="github-link"
@@ -62,10 +71,6 @@
         >
       </div>
       <div id="sport-reserve-photo" class="photo"></div>
-      <div class="project-description">
-        Application for runners — search for interesting races, register for
-        events, and manage your sports calendar.
-      </div>
       <div class="project-subtitle">Key Features</div>
       <div class="project-ul">
         <ul>
@@ -180,8 +185,12 @@
       </div>
     </div>
     <div id="plan-your-trip" class="project">
-      <div class="project-name">Plan Your Trip</div>
-      <div class="project-links">
+      <div class="project-name">
+        Plan Your Trip - AI-powered travel planning application that generates
+        personalized day-by-day itineraries using external Flight APIs and
+        intelligent recommendation logic.
+      </div>
+      <div id="plan-your-trip-project-links" class="project-links">
         <a
           class="github-link"
           href="https://github.com/ArkadiuszSchabowski/TripAI"
@@ -192,11 +201,6 @@
         >
       </div>
       <div id="plan-your-trip-photo" class="photo"></div>
-      <div class="project-description">
-        AI-powered travel planning application that generates personalized
-        day-by-day itineraries using external Flight APIs and intelligent
-        recommendation logic.
-      </div>
       <div class="project-subtitle">Key Features</div>
       <div class="project-ul">
         <ul>

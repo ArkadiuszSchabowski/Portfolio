@@ -9,6 +9,8 @@ import {
 } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { EmailService } from '../../_services/email.service';
 import { SendEmailDto } from '../../models/send-email-dto';
@@ -23,7 +25,9 @@ import { finalize } from 'rxjs';
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
+    MatMenuModule,
     ReactiveFormsModule,
   ],
   templateUrl: './home.component.html',
