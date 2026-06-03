@@ -25,64 +25,106 @@ textarea.home {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-width: 440px;
+  min-width: 400px;
   height: auto;
-  padding: 20px 20px;
+  padding-bottom: 20px;
   color: white;
   background-color: black;
 }
 
 #hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100%;
+  height: 700px;
+  min-height: 700px;
+}
+
+#hero-orange-background {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  height: 30vh;
+  min-height: 210px;
+  background-color: orangered;
+}
+
+#button-menu {
+  margin: 20px 20px 0 0;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#mat-menu-icon {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+#mat-menu-icon:hover {
+  color: black;
+}
+
+#hero-dark-background {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 40px);
-  min-width: 400px;
-  height: 100vh;
-  min-height: 500px;
-  background-image: url(../../../assets/hero.png);
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+}
+
+#hero-avatar {
+  position: absolute;
+  width: 300px;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-image: url(../../../assets/profile.png);
+  background-color: black;
+  margin: 50px 0 0 0;
+  border-radius: 50%;
+  border: 10px solid black;
 }
-
-#hero-tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding-top: 10px;
+#hero-title-specialization {
+  padding-top: 160px;
+  font-size: 18px;
 }
-
 #hero-title {
   font-size: 36px;
-  padding-bottom: 10px;
+  padding-top: 5px;
 }
 
-#hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding-top: 30px;
+#hero-subtitle {
+  text-align: center;
+  padding: 20px 50px;
 }
 
 #about-me {
-  padding: 10px 0 20px 0;
+  padding: 100px 30px 110px 30px;
+  line-height: 1.8;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
+}
+
+#about-me-description {
+  padding: 30px 30px 0 30px;
 }
 
 #projects {
   display: flex;
   flex-direction: column;
+  line-height: 1.8;
   width: 100%;
   height: auto;
-  padding: 10px 0 20px 0;
+  padding: 50px 30px 110px 30px;
 }
 
 #plan-your-trip-photo {
@@ -95,10 +137,17 @@ textarea.home {
 
 #sport-reserve {
   border-bottom: 2px solid white;
+  padding: 30px 0 100px 0;
+  font-size: 20px;
 }
 
 #plan-your-trip {
-  padding-top: 10px;
+  padding-top: 70px;
+  font-size: 20px;
+}
+
+#plan-your-trip-project-links {
+  padding-bottom: 30px;
 }
 
 #card-title {
@@ -110,7 +159,7 @@ textarea.home {
   padding: 10px 0;
   margin: 30px 0;
   color: white;
-  background-color: var(--mat-sys-primary);
+  background-color: orangered;
 }
 
 #submit-button-container {
@@ -121,22 +170,68 @@ textarea.home {
   height: auto;
 }
 
+#form-component {
+  padding-top: 50px;
+}
+
 #contact {
   display: flex;
   width: 100%;
   height: 100vh;
-  min-height: 640px;
+  min-height: 880px;
   flex-direction: column;
   align-items: center;
-  padding-top: 10px;
+  padding: 80px 30px 80px 30px;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
+  color: orangered;
+}
+
+#submit-button {
+  background-color: orangered;
+}
+
+#hero-external-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+#github-button,
+#linkedin-button {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 70px 20px 0 20px;
+}
+
+#github-button:hover,
+#linkedin-button:hover {
+  margin-bottom: 20px;
+}
+
+#github-button {
+  background-image: url(../../../assets/github.png);
+  margin-right: 50px;
+}
+
+#linkedin-button {
+  background-image: url(../../../assets/linkedin.png);
 }
 
 .hero-button {
   width: 100px;
   height: 40px;
   margin: 30px;
+}
+
+.description {
+  padding: 30px 0;
 }
 
 .hero-tech-stack-item {
@@ -164,26 +259,24 @@ textarea.home {
   font-size: 36px;
   font-weight: bold;
   padding-bottom: 10px;
+  color: orangered;
+}
+
+.project-name{
+  padding-bottom: 20px;
 }
 
 .project-subtitle {
-  font-size: 24px;
-  padding: 10px 0;
-}
-
-.project-name {
-  font-size: 28px;
+  font-size: 36px;
+  padding: 20px 0;
+  color: orangered;
 }
 
 .project-links {
   display: flex;
   flex-direction: row;
   font-size: 30px;
-  padding: 10px 0;
-}
-
-.project-description {
-  padding: 5px 0 10px 0;
+  padding: 0px 0 20px 0;
 }
 
 .github-link {
@@ -215,36 +308,39 @@ textarea.home {
 .card-title-contact {
   font-size: 36px;
   font-weight: bold;
-  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   mat-card.home {
     height: 520px;
   }
+
   mat-card-content.home {
     width: 500px;
     height: auto;
   }
-  #home-container {
-    padding: 20px 100px;
-  }
-  #hero {
-    width: 100%;
-  }
+
   #contact {
     align-items: center;
   }
-  #hero {
-    justify-content: center;
-    align-items: center;
-  }
-  #hero-title {
-    padding-bottom: 50px;
-  }
+
   #form-component {
     margin: auto;
   }
+
+  #about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 130px 110px 130px;
+    min-height: 500px;
+  }
+
+  #about-me-description {
+    padding: 30px 0 0 0;
+  }
+
   .card-title-contact {
     font-size: 36px;
     font-weight: bold;
@@ -262,25 +358,28 @@ textarea.home {
     width: 700px;
     height: auto;
   }
-  #home-container {
-    padding: 20px 200px;
-  }
-  #hero {
-    width: 100%;
-  }
+
   #contact {
     align-items: center;
   }
-  #hero {
-    justify-content: center;
-    align-items: center;
-  }
-  #hero-title {
-    padding-bottom: 50px;
-  }
+
   #form-component {
     margin: auto;
   }
+
+  #about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 130px 110px 130px;
+    min-height: 500px;
+  }
+
+  #about-me-description {
+    padding: 30px 0 0 0;
+  }
+
   .card-title-contact {
     font-size: 36px;
     font-weight: bold;
