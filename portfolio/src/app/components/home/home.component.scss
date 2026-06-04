@@ -26,6 +26,7 @@ textarea.home {
   align-items: center;
   width: 100%;
   min-width: 400px;
+  overflow-x: hidden;
   height: auto;
   padding-bottom: 20px;
   color: white;
@@ -87,7 +88,7 @@ textarea.home {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(../../../assets/profile.png);
+  background-image: url(../../../assets/profile.avif);
   background-color: black;
   margin: 50px 0 0 0;
   border-radius: 50%;
