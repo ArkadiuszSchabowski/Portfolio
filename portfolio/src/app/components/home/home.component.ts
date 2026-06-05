@@ -17,7 +17,7 @@ import { SendEmailDto } from '../../models/send-email-dto';
 import { ToastrService } from 'ngx-toastr';
 import { finalize } from 'rxjs';
 import { ScrollShowDirective } from '../../directives/scroll-show.directive';
-import { scrollFadeCenter, scrollFadeLeft, scrollFadeRight } from '../../animations/scroll.animations';
+import { scrollFadeCenter, scrollFadeDown, scrollFadeLeft, scrollFadeRight, scrollFadeUp } from '../../animations/scroll.animations';
 
 @Component({
   selector: 'app-home',
@@ -33,7 +33,7 @@ import { scrollFadeCenter, scrollFadeLeft, scrollFadeRight } from '../../animati
     ReactiveFormsModule,
     ScrollShowDirective
   ],
-  animations: [scrollFadeLeft, scrollFadeRight, scrollFadeCenter ],
+  animations: [scrollFadeLeft, scrollFadeRight, scrollFadeCenter, scrollFadeDown, scrollFadeUp ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

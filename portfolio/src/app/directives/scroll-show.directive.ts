@@ -1,4 +1,12 @@
-import { Directive, ElementRef, AfterViewInit, OnDestroy, Input, HostBinding, inject } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  AfterViewInit,
+  OnDestroy,
+  Input,
+  HostBinding,
+  inject
+} from '@angular/core';
 
 @Directive({
   selector: '[scrollShow]',
@@ -8,24 +16,47 @@ export class ScrollShowDirective implements AfterViewInit, OnDestroy {
   private el = inject(ElementRef);
   private observer: IntersectionObserver | null = null;
 
-  @Input() scrollShow: 'left' | 'right' | 'center' = 'left';
+  @Input() scrollShow: 'left' | 'right' | 'center' | 'up' | 'down' = 'left';
 
-  @HostBinding('@scrollLeft') get leftState() { return this.scrollShow === 'left' ? this.currentState : 'void'; }
-  @HostBinding('@scrollRight') get rightState() { return this.scrollShow === 'right' ? this.currentState : 'void'; }
-  @HostBinding('@scrollCenter') get centerState() { return this.scrollShow === 'center' ? this.currentState : 'void'; }
+  private currentState: 'hidden' | 'visible' = 'hidden';
 
-  private currentState = 'hidden';
+  @HostBinding('@scrollLeft')
+  get leftState() {
+    return this.scrollShow === 'left' ? this.currentState : 'void';
+  }
+
+  @HostBinding('@scrollRight')
+  get rightState() {
+    return this.scrollShow === 'right' ? this.currentState : 'void';
+  }
+
+  @HostBinding('@scrollCenter')
+  get centerState() {
+    return this.scrollShow === 'center' ? this.currentState : 'void';
+  }
+
+  @HostBinding('@scrollUp')
+  get upState() {
+    return this.scrollShow === 'up' ? this.currentState : 'void';
+  }
+
+  @HostBinding('@scrollDown')
+  get downState() {
+    return this.scrollShow === 'down' ? this.currentState : 'void';
+  }
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        this.currentState = 'visible';
-      
-        this.observer?.disconnect(); 
+    this.observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.currentState = 'visible';
+          this.observer?.disconnect();
+        }
+      },
+      {
+        threshold: 0
       }
-    }, { 
-      threshold: 0
-    });
+    );
 
     this.observer.observe(this.el.nativeElement);
   }

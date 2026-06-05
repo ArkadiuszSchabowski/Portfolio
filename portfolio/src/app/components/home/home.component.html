@@ -1,45 +1,23 @@
 <div id="home-container">
   <section id="hero">
-    <div id="hero-orange-background">
-      <div id="button-menu-container">
-        <button [matMenuTriggerFor]="menu" id="button-menu">
-          <div class="icon-wrapper">
-            <mat-icon id="mat-menu-icon">menu</mat-icon>
-          </div>
-        </button>
-
-        <mat-menu #menu="matMenu">
-          <a class="navbar-mobile-button" mat-menu-item href="#projects"
-            >Projects</a
-          >
-          <a class="navbar-mobile-button" mat-menu-item href="#contact"
-            >Contact</a
-          >
-        </mat-menu>
-      </div>
-    </div>
+    <div id="hero-background"></div>
     <div id="hero-dark-background">
       <div id="hero-title-specialization">Full-Stack Developer</div>
       <div id="hero-title">Arkadiusz Schabowski</div>
-      <div id="hero-subtitle">
-        Full-Stack Developer specializing in .NET and Java backend development
-        with Angular frontend applications.
-      </div>
       <div id="hero-external-buttons">
         <a
-          id="github-button"
-          class="hero-button"
-          href="https://github.com/ArkadiuszSchabowski"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-
-        <a
-          id="linkedin-button"
-          class="hero-button"
           href="https://linkedin.com/in/arkadiusz-schabowski"
           target="_blank"
           rel="noopener noreferrer"
+        >
+          <span class="iconify hero-icon" data-icon="mdi:linkedin"></span
+        ></a>
+        <a
+          href="https://github.com/ArkadiuszSchabowski"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="iconify hero-icon" data-icon="mdi:github"></span
         ></a>
       </div>
     </div>
@@ -47,384 +25,321 @@
   </section>
   <section id="about-me">
     <div [scrollShow]="'center'" class="title">About Me</div>
-    <div [scrollShow]="'center'" id="about-me-description" class="description">
-      Full-stack developer specializing in .NET, Angular and microservices-based
-      applications. I focus on building scalable backend systems, REST APIs and
-      modern frontend applications with an emphasis on clean architecture,
-      maintainability and performance. My experience includes collaborative
-      development, Docker-based environments, asynchronous communication and
-      backend development with C# and Java.
+    <div id="about-me-container">
+      <div [scrollShow]="'left'" id="about-me-description" class="description">
+        Full-stack developer specializing in .NET, Angular and
+        microservices-based applications. I focus on building scalable backend
+        systems, REST APIs and modern frontend applications with an emphasis on
+        clean architecture, maintainability and performance. My experience
+        includes collaborative development, Docker-based environments,
+        asynchronous communication and backend development with C# and Java.
+      </div>
+      <div [scrollShow]="'right'" id="about-me-photo"></div>
     </div>
   </section>
   <section id="projects">
-    <div [scrollShow]="'center'" class="title">Projects</div>
-
-    <div [scrollShow]="'left'" id="sport-reserve-left-scroll-wrapper">
-      <div id="sport-reserve" class="project">
-        <div class="project-name">
-          Sport Reserve - search for interesting races, register for events, and
-          manage your sports calendar.
-        </div>
-        <div class="project-links">
-          <a
-            class="github-link"
-            href="https://github.com/ArkadiuszSchabowski/SportReserve"
-            >GitHub</a
-          >
-        </div>
-        <div id="sport-reserve-photo" class="photo"></div>
-      </div>
-      <div [scrollShow]="'center'" class="project-subtitle">Key Features</div>
-      <div [scrollShow]="'center'" class="project-ul">
-        <ul>
-          <li>Microservices architecture with shared modules</li>
-          <li>Asynchronous email processing with RabbitMQ</li>
-
-          <li>
-            Role-Based Access Control (RBAC) for users, managers, and admins
-          </li>
-
-          <li>API Gateway for centralized routing and security</li>
-
-          <li>MSSQL and MongoDB integration for different data needs</li>
-
-          <li>CI/CD pipeline (GitHub Actions)</li>
-          <li>Docker & Docker Compose</li>
-        </ul>
-      </div>
-
-      <div [scrollShow]="'center'" class="project-subtitle">Tech Stack</div>
-      <div [scrollShow]="'center'" class="tech-stack-items">
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-          />
-          <div class="tech-stack-text">C#</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
-          />
-          <div class="tech-stack-text">RabbitMQ</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
-          />
-          <div class="tech-stack-text">MSSQL</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-          />
-          <div class="tech-stack-text">MongoDB</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-          />
-          <div class="tech-stack-text">REST API</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
-          />
-          <div class="tech-stack-text">Docker</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg"
-          />
-          <div class="tech-stack-text">Angular</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg"
-          />
-          <div class="tech-stack-text">Angular Material</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
-          />
-          <div class="tech-stack-text">ngx-bootstrap</div>
-        </div>
-      </div>
-
-      <div [scrollShow]="'center'" class="project-subtitle">Testing</div>
-      <div [scrollShow]="'center'" class="tech-stack-items">
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg"
-          />
-          <div class="tech-stack-text">xUnit</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jasmine/jasmine-original.svg"
-          />
-          <div class="tech-stack-text">Jasmine</div>
-        </div>
-      </div>
+    <div [scrollShow]="'center'" id="projects-title" class="title">
+      Projects
     </div>
 
-    <div id="plan-your-trip" class="project">
-      <div [scrollShow]="'right'" id="plan-your-trip-right-wrapper">
-        <div class="project-name">
-          Plan Your Trip - AI-powered travel planning application that generates
-          personalized day-by-day itineraries using external Flight APIs and
-          intelligent recommendation logic.
+    <mat-card [scrollShow]="'up'" id="sport-reserve" class="mat-card-project">
+      <mat-card-content class="mat-card-project">
+        <div
+          id="sport-reserve-mat-card-left-side"
+          class="mat-card-left-side"
+        ></div>
+        <div class="mat-card-right-side">
+          <div class="mat-card-project-title">Sport Reserve</div>
+          <div class="mat-card-project-description">
+            A sports event management platform that enables users to discover
+            races, register for events, and manage their sports calendar. Built
+            with a microservices architecture, it features role-based access
+            control, asynchronous email processing, centralized API routing, and
+            optimized data storage tailored to different business requirements.
+          </div>
+          <div class="mat-card-project-technologies">
+            <div class="mat-card-project-technology">.NET / C#</div>
+            <div class="mat-card-project-technology">RabbitMQ</div>
+            <div class="mat-card-project-technology">MSSQL</div>
+            <div class="mat-card-project-technology">MongoDB</div>
+            <div class="mat-card-project-technology">REST API</div>
+            <div class="mat-card-project-technology">Docker</div>
+            <div class="mat-card-project-technology">Angular</div>
+            <div class="mat-card-project-technology">Angular Material</div>
+            <div class="mat-card-project-technology">ngx-bootstrap</div>
+          </div>
+          <div class="mat-card-project-links">
+            <div class="mat-card-project-link">
+              <a
+                href="https://github.com/ArkadiuszSchabowski/SportReserve"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="iconify project-icon"
+                  data-icon="mdi:book-open-page-variant"
+                ></span
+              ></a>
+            </div>
+            <div class="mat-card-project-link"></div>
+            <div></div>
+          </div>
         </div>
-        <div id="plan-your-trip-project-links" class="project-links">
-          <a
-            class="github-link"
-            href="https://github.com/ArkadiuszSchabowski/TripAI"
-            >GitHub</a
-          >
-          <a class="github-link" href="https://plan-your-trip-ai.netlify.app/"
-            >Live Demo</a
-          >
-        </div>
-        <div id="plan-your-trip-photo" class="photo"></div>
-      </div>
-      <div [scrollShow]="'center'" class="project-subtitle">Key Features</div>
-      <div [scrollShow]="'center'" class="project-ul">
-        <ul>
-          <li>AI-powered personalized trip planning</li>
-          <li>Real-time flight data integration</li>
-          <li>Day-by-day itinerary generation</li>
-          <li>Personalized travel recommendations</li>
-        </ul>
-      </div>
+      </mat-card-content>
+    </mat-card>
 
-      <div [scrollShow]="'center'" class="project-subtitle">Tech Stack</div>
-      <div [scrollShow]="'center'" class="tech-stack-items">
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-          />
-          <div class="tech-stack-text">Java</div>
+    <mat-card
+      [scrollShow]="'up'"
+      id="project-plan-your-trip"
+      class="mat-card-project"
+    >
+      <mat-card-content class="mat-card-project">
+        <div
+          id="plan-your-trip-mat-card-left-side"
+          class="mat-card-left-side"
+        ></div>
+        <div class="mat-card-right-side">
+          <div class="mat-card-project-title">Plan Your Trip</div>
+          <div class="mat-card-project-description">
+            An AI-powered travel planning platform that generates personalized
+            day-by-day itineraries based on user preferences, destinations, and
+            travel details. The system integrates external flight data sources
+            and intelligent recommendation logic to create optimized travel
+            plans tailored to each trip.
+          </div>
+          <div class="mat-card-project-technologies">
+            <div class="mat-card-project-technology">Java</div>
+            <div class="mat-card-project-technology">Spring Boot</div>
+            <div class="mat-card-project-technology">Gemini AI</div>
+            <div class="mat-card-project-technology">REST API</div>
+            <div class="mat-card-project-technology">Angular</div>
+            <div class="mat-card-project-technology">Angular Material</div>
+          </div>
+          <div class="mat-card-project-links">
+            <div class="mat-card-project-link">
+              <a
+                href="https://github.com/ArkadiuszSchabowski/TripAI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="iconify project-icon"
+                  data-icon="mdi:book-open-page-variant"
+                ></span
+              ></a>
+            </div>
+            <div class="mat-card-project-link">
+              <a
+                href="https://plan-your-trip-ai.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="iconify project-icon"
+                  data-icon="mdi:play-circle"
+                ></span
+              ></a>
+            </div>
+            <div></div>
+          </div>
         </div>
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
-            alt="Spring Boot"
-          />
-          <div class="tech-stack-text">Spring Boot</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
-            alt="Gemini AI"
-          />
-          <div class="tech-stack-text">Gemini AI</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-            alt="REST API"
-          />
-          <div class="tech-stack-text">REST API</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg"
-            alt="Angular"
-          />
-          <div class="tech-stack-text">Angular</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg"
-            alt="Angular Material"
-          />
-          <div class="tech-stack-text">Angular Material</div>
-        </div>
-      </div>
-
-      <div [scrollShow]="'center'" class="project-subtitle">Testing</div>
-      <div [scrollShow]="'center'" class="tech-stack-items">
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-plain.svg"
-            alt="JUnit 5"
-          />
-          <div class="tech-stack-text">JUnit 5</div>
-        </div>
-
-        <div class="tech-stack-item">
-          <img
-            class="tech-stack-img"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jasmine/jasmine-original.svg"
-            alt="Jasmine"
-          />
-          <div class="tech-stack-text">Jasmine</div>
-        </div>
-      </div>
-    </div>
+      </mat-card-content>
+    </mat-card>
   </section>
   <section id="contact">
     <div [scrollShow]="'center'" class="title" class="card-title-contact">
       Contact
     </div>
+    <div id="mat-card-contact-container">
+      <div id="mat-card-contact-form" [scrollShow]="'left'">
+        <form
+          id="form-component"
+          [formGroup]="form"
+          (ngSubmit)="sendEmail()"
+          autocomplete="off"
+        >
+          <mat-card class="email-form">
+            <mat-card-title id="card-title">Send Email</mat-card-title>
 
-    <form
-      [scrollShow]="'left'"
-      id="form-component"
-      [formGroup]="form"
-      (ngSubmit)="sendEmail()"
-      autocomplete="off"
-    >
-      <mat-card class="home">
-        <mat-card-title id="card-title">Send Email</mat-card-title>
+            <mat-card-content class="home">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Your email</mat-label>
 
-        <mat-card-content class="home">
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Your email</mat-label>
+                <input
+                  matInput
+                  formControlName="from"
+                  placeholder="email@gmail.com"
+                />
 
-            <input
-              matInput
-              formControlName="from"
-              placeholder="email@gmail.com"
-            />
+                <mat-error
+                  *ngIf="
+                    form.get('from')?.hasError('required') &&
+                    form.get('from')?.touched
+                  "
+                >
+                  Email is required.
+                </mat-error>
 
-            <mat-error
-              *ngIf="
-                form.get('from')?.hasError('required') &&
-                form.get('from')?.touched
-              "
-            >
-              Email is required.
-            </mat-error>
+                <mat-error
+                  *ngIf="
+                    form.get('from')?.hasError('email') &&
+                    form.get('from')?.touched
+                  "
+                >
+                  Invalid email address.
+                </mat-error>
+              </mat-form-field>
 
-            <mat-error
-              *ngIf="
-                form.get('from')?.hasError('email') && form.get('from')?.touched
-              "
-            >
-              Invalid email address.
-            </mat-error>
-          </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field subject">
+                <mat-label>Subject</mat-label>
 
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Subject</mat-label>
+                <input
+                  matInput
+                  formControlName="subject"
+                  placeholder="e.g. Job Opportunity"
+                />
 
-            <input
-              matInput
-              formControlName="subject"
-              placeholder="e.g. Job Opportunity"
-            />
+                <mat-error
+                  *ngIf="
+                    form.get('subject')?.hasError('required') &&
+                    form.get('subject')?.touched
+                  "
+                >
+                  Subject is required.
+                </mat-error>
 
-            <mat-error
-              *ngIf="
-                form.get('subject')?.hasError('required') &&
-                form.get('subject')?.touched
-              "
-            >
-              Subject is required.
-            </mat-error>
+                <mat-error
+                  *ngIf="
+                    form.get('subject')?.hasError('minlength') &&
+                    form.get('subject')?.touched
+                  "
+                >
+                  Subject must be at least 5 characters.
+                </mat-error>
 
-            <mat-error
-              *ngIf="
-                form.get('subject')?.hasError('minlength') &&
-                form.get('subject')?.touched
-              "
-            >
-              Subject must be at least 5 characters.
-            </mat-error>
+                <mat-error
+                  *ngIf="
+                    form.get('subject')?.hasError('maxlength') &&
+                    form.get('subject')?.touched
+                  "
+                >
+                  Subject cannot exceed 100 characters.
+                </mat-error>
+              </mat-form-field>
 
-            <mat-error
-              *ngIf="
-                form.get('subject')?.hasError('maxlength') &&
-                form.get('subject')?.touched
-              "
-            >
-              Subject cannot exceed 100 characters.
-            </mat-error>
-          </mat-form-field>
+              <mat-form-field appearance="outline" class="message">
+                <mat-label>Message</mat-label>
 
-          <mat-form-field appearance="outline" class="message">
-            <mat-label>Message</mat-label>
+                <textarea
+                  class="home"
+                  matInput
+                  rows="6"
+                  formControlName="message"
+                  placeholder="Your message..."
+                ></textarea>
 
-            <textarea
-              class="home"
-              matInput
-              rows="6"
-              formControlName="message"
-              placeholder="Your message..."
-            ></textarea>
+                <mat-error
+                  *ngIf="
+                    form.get('message')?.hasError('required') &&
+                    form.get('message')?.touched
+                  "
+                >
+                  Message is required.
+                </mat-error>
 
-            <mat-error
-              *ngIf="
-                form.get('message')?.hasError('required') &&
-                form.get('message')?.touched
-              "
-            >
-              Message is required.
-            </mat-error>
+                <mat-error
+                  *ngIf="
+                    form.get('message')?.hasError('minlength') &&
+                    form.get('message')?.touched
+                  "
+                >
+                  Message must be at least 10 characters.
+                </mat-error>
 
-            <mat-error
-              *ngIf="
-                form.get('message')?.hasError('minlength') &&
-                form.get('message')?.touched
-              "
-            >
-              Message must be at least 10 characters.
-            </mat-error>
+                <mat-error
+                  *ngIf="
+                    form.get('message')?.hasError('maxlength') &&
+                    form.get('message')?.touched
+                  "
+                >
+                  Message cannot exceed 1000 characters.
+                </mat-error>
+              </mat-form-field>
 
-            <mat-error
-              *ngIf="
-                form.get('message')?.hasError('maxlength') &&
-                form.get('message')?.touched
-              "
-            >
-              Message cannot exceed 1000 characters.
-            </mat-error>
-          </mat-form-field>
-
-          <div id="submit-button-container">
-            <button
-              id="submit-button"
-              mat-flat-button
-              type="submit"
-              [disabled]="isSending"
-            >
-              {{ isSending ? "Sending..." : "Send" }}
-            </button>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </form>
+              <div id="submit-button-container">
+                <button
+                  id="submit-button"
+                  mat-flat-button
+                  type="submit"
+                  [disabled]="isSending"
+                >
+                  {{ isSending ? "Sending..." : "Send" }}
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </form>
+      </div>
+      <div id="mat-card-contact-form-information" [scrollShow]="'right'">
+        <mat-card class="mat-card-contact-information">
+          <mat-card-content id="mat-card-contact-information-content">
+            <div class="mat-card-contact-information-title">
+              Contact Information
+            </div>
+            <div class="mat-card-contact-information-description">
+              You can contact me using the form or any of the methods below.
+            </div>
+            <div class="mat-card-contact-information-ways">
+              <div class="mat-card-contact-information-way">
+                <div class="mat-card-contact-information-way-item">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:gmail"
+                    data-width="40"
+                  ></span>
+                </div>
+                <div class="mat-card-contact-information-way-item-text">
+                  arkadiusz.schabowski&#64;gmail.com
+                </div>
+              </div>
+              <div class="mat-card-contact-information-way">
+                <div class="mat-card-contact-information-way-item">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:linkedin"
+                    data-width="40"
+                  ></span>
+                </div>
+                <div>
+                  <a
+                    class="mat-card-contact-information-way-item-text"
+                    href="https://linkedin.com/in/arkadiusz-schabowski"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Linkedin</a
+                  >
+                </div>
+              </div>
+              <div class="mat-card-contact-information-way">
+                <div class="mat-card-contact-information-way-item">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:github"
+                    data-width="40"
+                  ></span>
+                </div>
+                <a
+                  class="mat-card-contact-information-way-item-text"
+                  href="https://github.com/ArkadiuszSchabowski"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
   </section>
 </div>
