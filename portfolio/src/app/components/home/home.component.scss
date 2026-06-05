@@ -3,17 +3,40 @@
 mat-card-content.home {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 50px);
-  min-width: 400px;
-  height: auto;
 }
 
 mat-form-field.message {
   padding-top: 10px;
 }
 
+mat-form-field.subject {
+  padding-top: 10px;
+}
+
 mat-card.home {
   height: 550px;
+}
+
+mat-card.mat-card-contact-information {
+  display: flex;
+  width: 100%;
+  min-width: 400px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.mat-card-project-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.mat-card-contact-information-way {
+  display: flex;
+  flex-direction: row;
+}
+
+.mat-card-contact-information-way-item {
+  padding: 0 20px 0 0;
 }
 
 textarea.home {
@@ -25,12 +48,11 @@ textarea.home {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-width: 400px;
-  overflow-x: hidden;
+  min-width: 430px;
   height: auto;
   padding-bottom: 20px;
   color: white;
-  background-color: black;
+  background-color: silver;
 }
 
 #hero {
@@ -39,22 +61,60 @@ textarea.home {
   align-items: center;
   flex-direction: column;
   min-width: 100%;
-  height: 700px;
-  min-height: 700px;
+  height: auto;
 }
 
-#hero-orange-background {
+#mat-menu {
+  display: flex;
+  position: absolute;
+}
+
+#hero-background {
   display: flex;
   justify-content: right;
   width: 100%;
-  height: 30vh;
-  min-height: 210px;
-  background-color: orangered;
+  min-height: 220px;
+  background-color: silver;
+}
+
+#hero-dark-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: gray;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  background-color: gray;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects-title {
+  color: white;
+}
+
+#contact {
+  display: flex;
+  width: 100%;
+  min-width: 430px;
+  height: auto;
+  min-height: 700px;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 30px 20px 30px;
+  color: black;
+  background-color: silver;
 }
 
 #button-menu {
   margin: 20px 20px 0 0;
-  color: white;
+  color: black;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -69,16 +129,7 @@ textarea.home {
 }
 
 #mat-menu-icon:hover {
-  color: black;
-}
-
-#hero-dark-background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 70vh;
-  background-color: black;
+  color: white;
 }
 
 #hero-avatar {
@@ -90,16 +141,16 @@ textarea.home {
   background-size: contain;
   background-image: url(../../../assets/profile.avif);
   background-color: black;
-  margin: 50px 0 0 0;
-  border-radius: 50%;
-  border: 10px solid black;
+  margin: 70px 0 0 0;
+  border-radius: 25px;
+  border: 10px solid gray;
 }
 #hero-title-specialization {
   padding-top: 160px;
-  font-size: 18px;
+  font-size: 26px;
 }
 #hero-title {
-  font-size: 36px;
+  font-size: 42px;
   padding-top: 5px;
 }
 
@@ -109,46 +160,83 @@ textarea.home {
 }
 
 #about-me {
-  padding: 100px 30px 110px 30px;
-  line-height: 1.8;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  min-width: 430px;
+  padding: 70px 25px 110px 25px;
+  color: black;
+  background-color: silver;
+}
+
+#about-me-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 30px 0 0 0;
 }
 
 #about-me-description {
-  padding: 30px 30px 0 30px;
-}
-
-#projects {
   display: flex;
-  flex-direction: column;
-  line-height: 1.8;
   width: 100%;
   height: auto;
-  padding: 50px 30px 110px 30px;
+  line-height: 1.6;
 }
 
-#plan-your-trip-photo {
-  background-image: url(../../../assets/plan_your_trip.png);
+#about-me-photo {
+  display: flex;
+  width: auto;
+  height: auto;
+  aspect-ratio: 2 /1.5;
+  background-image: url(../../../assets/aboutme.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
 }
 
-#sport-reserve-photo {
-  background-image: url(../../../assets/sport_reserve.png);
+.iconify {
+  color: #2196f3;
 }
 
-#sport-reserve {
-  border-bottom: 2px solid white;
-  padding: 30px 0 100px 0;
-  font-size: 20px;
+.iconify-hero {
+  color: white;
+}
+.mat-card-contact-information-way {
+  display: flex;
+  align-items: center;
 }
 
-#plan-your-trip {
-  padding-top: 70px;
-  font-size: 20px;
+.mat-card-contact-information-way-item-text {
+  font-size: 18px;
+  text-decoration: none;
+  color: #1976d2;
 }
 
-#plan-your-trip-project-links {
-  padding-bottom: 30px;
+.mat-card-contact-information-way-item-text:hover {
+  color: #2196f3;
+}
+
+.project-icon {
+  font-size: 50px;
+  color: black;
+  padding-right: 10px;
+}
+
+.project-icon:hover {
+  font-size: 50px;
+  color: #2196f3;
+}
+
+.hero-icon {
+  font-size: 100px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.hero-icon:hover {
+  color: #2196f3;
 }
 
 #card-title {
@@ -160,7 +248,7 @@ textarea.home {
   padding: 10px 0;
   margin: 30px 0;
   color: white;
-  background-color: orangered;
+  background-color: #1976d2;
 }
 
 #submit-button-container {
@@ -175,40 +263,34 @@ textarea.home {
   padding-top: 50px;
 }
 
-#contact {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  min-height: 880px;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 30px 80px 30px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  color: orangered;
+#submit-button {
+  background-color: #1976d2;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#submit-button {
-  background-color: orangered;
+#submit-button:hover {
+  background-color: #2196f3;
 }
 
 #hero-external-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100px;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 20px;
 }
 
 #github-button,
 #linkedin-button {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 70px 20px 0 20px;
+  margin-top: 30px;
 }
 
 #github-button:hover,
@@ -219,6 +301,7 @@ textarea.home {
 #github-button {
   background-image: url(../../../assets/github.png);
   margin-right: 50px;
+  color: black;
 }
 
 #linkedin-button {
@@ -228,7 +311,7 @@ textarea.home {
 .hero-button {
   width: 100px;
   height: 40px;
-  margin: 30px;
+  margin: 0;
 }
 
 .description {
@@ -259,18 +342,17 @@ textarea.home {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-  padding-bottom: 10px;
-  color: orangered;
+  color: black;
 }
 
-.project-name{
+.project-name {
   padding-bottom: 20px;
 }
 
 .project-subtitle {
   font-size: 36px;
   padding: 20px 0;
-  color: orangered;
+  color: black;
 }
 
 .project-links {
@@ -311,43 +393,222 @@ textarea.home {
   font-weight: bold;
 }
 
+mat-card.mat-card-project {
+  display: flex;
+  width: 90%;
+  height: auto;
+  min-height: 300px;
+  color: black;
+  margin: 20px;
+}
+
+mat-card-content.mat-card-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#sport-reserve,
+#project-plan-your-trip {
+  margin-top: 50px;
+}
+
+#project-plan-your-trip {
+  margin-bottom: 50px;
+}
+
+.mat-card-left-side,
+.mat-card-right-side {
+  display: flex;
+  height: 100%;
+}
+
+.mat-card-left-side {
+  width: 100%;
+  min-height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#sport-reserve-mat-card-left-side {
+  background-image: url(../../../assets/sport_reserve.png);
+}
+
+#plan-your-trip-mat-card-left-side {
+  background-image: url(../../../assets/plan_your_trip.png);
+}
+
+.mat-card-right-side {
+  flex-direction: column;
+  align-items: baseline;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.mat-card-project-title,
+.mat-card-contact-information-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.mat-card-project-description,
+.mat-card-contact-information-description {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.mat-card-project-technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(220, 218, 218);
+  padding: 0 10px;
+  margin: 0 10px 10px 0;
+  font-weight: bold;
+  border-radius: 25px;
+  width: auto;
+  height: 30px;
+  font-size: 12px;
+}
+
+.mat-card-project-technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  padding: 10px 0;
+}
+
+#mat-card-contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+#mat-card-contact-form,
+#mat-card-contact-form-information {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.email-form {
+  display: flex;
+  width: calc(100vw - 75px);
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  mat-card.home {
-    height: 520px;
-  }
-
-  mat-card-content.home {
-    width: 500px;
-    height: auto;
-  }
-
-  #contact {
-    align-items: center;
-  }
-
-  #form-component {
-    margin: auto;
-  }
-
-  #about-me {
+  #projects,
+  #plan-your-trip {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 130px 110px 130px;
-    min-height: 500px;
+    text-align: center;
   }
 
-  #about-me-description {
-    padding: 30px 0 0 0;
+  #form-component {
+    display: flex;
+    width: 100%;
   }
 
-  .card-title-contact {
-    font-size: 36px;
-    font-weight: bold;
+  #projects {
+    padding: 70px 50px;
   }
+
+  #about-me,
+  #contact {
+    display: flex;
+    padding: 70px 90px;
+  }
+
+  #about-me-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+  }
+
+  #about-me-description,
+  #about-me-photo {
+    display: flex;
+    width: 50%;
+    height: auto;
+    font-size: 19px;
+  }
+
+  #about-me-photo {
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  #hero {
+    flex-direction: row;
+  }
+
+  #hero-background,
+  #hero-dark-background {
+    height: 100vh;
+  }
+
+  #hero-background {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  #hero-dark-background {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 400px;
+    border-bottom-left-radius: 25px;
+  }
+
+  #sport-reserve {
+    margin-top: 50px;
+  }
+
   .title {
     text-align: center;
+  }
+
+  mat-card-content.mat-card-project {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mat-card-right-side {
+    width: 60%;
+  }
+  .mat-card-left-side {
+    width: 40%;
+  }
+
+  #hero-avatar {
+    margin: 0 0 0 150px;
+  }
+  #hero-title-specialization,
+  #hero-title,
+  #hero-external-buttons {
+    padding-left: 150px;
+  }
+
+  #hero-title {
+    padding-top: 20px;
+  }
+
+  #github-button,
+  #linkedin-button {
+    margin-top: 150px;
+  }
+  mat-card.mat-card-project {
+    margin: 0;
   }
 }
 
@@ -355,38 +616,134 @@ textarea.home {
   mat-card.home {
     height: 520px;
   }
-  mat-card-content.home {
-    width: 700px;
-    height: auto;
+
+  mat-card.mat-card-project {
+    margin: 0;
   }
 
-  #contact {
-    align-items: center;
-  }
-
-  #form-component {
-    margin: auto;
-  }
-
-  #about-me {
+  #projects,
+  #plan-your-trip {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 130px 110px 130px;
-    min-height: 500px;
+    text-align: center;
   }
 
-  #about-me-description {
-    padding: 30px 0 0 0;
+  #projects {
+    padding: 70px 200px;
   }
 
-  .card-title-contact {
-    font-size: 36px;
-    font-weight: bold;
+  #about-me {
+    display: flex;
+    padding: 70px 250px;
+  }
+
+  #about-me-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+  }
+
+  #about-me-description,
+  #about-me-photo {
+    display: flex;
+    width: 50%;
+    height: auto;
+    font-size: 19px;
+  }
+
+  #about-me-photo {
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  #hero {
+    flex-direction: row;
+  }
+
+  #hero-background,
+  #hero-dark-background {
+    height: 100vh;
+  }
+
+  #hero-background {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  #hero-dark-background {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-width: 700px;
+    border-bottom-left-radius: 25px;
+  }
+
+  #hero-title {
+    padding-top: 20px;
+    font-size: 66px;
+  }
+
+  #hero-title-specialization {
+    font-size: 30px;
+  }
+
+  #sport-reserve {
+    margin-top: 50px;
   }
 
   .title {
+    text-align: center;
+  }
+
+  mat-card-content.mat-card-project {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mat-card-right-side {
+    width: 60%;
+  }
+  .mat-card-left-side {
+    width: 40%;
+  }
+
+  #hero-avatar {
+    margin: 0 0 0 150px;
+  }
+  #hero-title-specialization,
+  #hero-title,
+  #hero-external-buttons {
+    padding-left: 20%;
+  }
+
+  #github-button,
+  #linkedin-button {
+    margin-top: 150px;
+  }
+
+  .email-form {
+    display: flex;
+    width: 60%;
+  }
+
+  #mat-card-contact-container {
+    flex-direction: row;
+    padding: 0 225px;
+  }
+  #form-component {
+    width: 100%;
+  }
+  .email-form {
+    width: 95%;
+    height: 100%;
+    margin-right: 5%;
+  }
+
+  #mat-card-contact-form-information {
     text-align: center;
   }
 }

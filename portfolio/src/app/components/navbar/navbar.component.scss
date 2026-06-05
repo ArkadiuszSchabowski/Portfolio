@@ -1,0 +1,26 @@
+#navbar {
+  position: fixed;
+  width: 430px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 10px;
+  z-index: 999;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #1976D2;
+}
