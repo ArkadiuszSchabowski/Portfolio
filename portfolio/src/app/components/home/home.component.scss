@@ -53,6 +53,7 @@ textarea.home {
   padding-bottom: 20px;
   color: white;
   background-color: silver;
+  overflow-x: hidden;
 }
 
 #hero {
@@ -60,8 +61,8 @@ textarea.home {
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 #mat-menu {
@@ -82,7 +83,7 @@ textarea.home {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 400px;
   background-color: gray;
 }
 
@@ -277,7 +278,7 @@ textarea.home {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 430px;
   height: 500px;
   margin-bottom: 20px;
 }
@@ -496,6 +497,9 @@ mat-card-content.mat-card-project {
   width: 100%;
   height: auto;
 }
+#mat-card-contact-form {
+  flex-direction: column;
+}
 .email-form {
   display: flex;
   width: calc(100vw - 75px);
@@ -621,6 +625,11 @@ mat-card-content.mat-card-project {
     margin: 0;
   }
 
+  mat-card-content.mat-card-project {
+    display: flex;
+    flex-direction: row;
+  }
+
   #projects,
   #plan-your-trip {
     display: flex;
@@ -699,11 +708,6 @@ mat-card-content.mat-card-project {
     text-align: center;
   }
 
-  mat-card-content.mat-card-project {
-    display: flex;
-    flex-direction: row;
-  }
-
   .mat-card-right-side {
     width: 60%;
   }
@@ -725,25 +729,25 @@ mat-card-content.mat-card-project {
     margin-top: 150px;
   }
 
-  .email-form {
+  #mat-card-contact-container {
     display: flex;
-    width: 60%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 225px 0 180px;
   }
 
-  #mat-card-contact-container {
-    flex-direction: row;
-    padding: 0 225px;
-  }
   #form-component {
-    width: 100%;
+    display: flex;
+    width: 50%;
+    margin: auto;
   }
-  .email-form {
-    width: 95%;
-    height: 100%;
-    margin-right: 5%;
-  }
+  #mat-card-contact-form {
+  flex-direction: row;
+}
 
   #mat-card-contact-form-information {
-    text-align: center;
+    display: flex;
+    width: 42%;
   }
 }
