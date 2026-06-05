@@ -151,8 +151,9 @@
       Contact
     </div>
     <div id="mat-card-contact-container">
-      <div id="mat-card-contact-form" [scrollShow]="'left'">
+      <div id="mat-card-contact-form">
         <form
+          [scrollShow]="'left'"
           id="form-component"
           [formGroup]="form"
           (ngSubmit)="sendEmail()"
@@ -279,66 +280,66 @@
             </mat-card-content>
           </mat-card>
         </form>
-      </div>
-      <div id="mat-card-contact-form-information" [scrollShow]="'right'">
-        <mat-card class="mat-card-contact-information">
-          <mat-card-content id="mat-card-contact-information-content">
-            <div class="mat-card-contact-information-title">
-              Contact Information
-            </div>
-            <div class="mat-card-contact-information-description">
-              You can contact me using the form or any of the methods below.
-            </div>
-            <div class="mat-card-contact-information-ways">
-              <div class="mat-card-contact-information-way">
-                <div class="mat-card-contact-information-way-item">
-                  <span
-                    class="iconify"
-                    data-icon="mdi:gmail"
-                    data-width="40"
-                  ></span>
-                </div>
-                <div class="mat-card-contact-information-way-item-text">
-                  arkadiusz.schabowski&#64;gmail.com
-                </div>
+        <div id="mat-card-contact-form-information" [scrollShow]="'right'">
+          <mat-card class="mat-card-contact-information">
+            <mat-card-content id="mat-card-contact-information-content">
+              <div class="mat-card-contact-information-title">
+                Contact Information
               </div>
-              <div class="mat-card-contact-information-way">
-                <div class="mat-card-contact-information-way-item">
-                  <span
-                    class="iconify"
-                    data-icon="mdi:linkedin"
-                    data-width="40"
-                  ></span>
+              <div class="mat-card-contact-information-description">
+                You can contact me using the form or any of the methods below.
+              </div>
+              <div class="mat-card-contact-information-ways">
+                <div class="mat-card-contact-information-way">
+                  <div class="mat-card-contact-information-way-item">
+                    <span
+                      class="iconify"
+                      data-icon="mdi:gmail"
+                      data-width="40"
+                    ></span>
+                  </div>
+                  <div class="mat-card-contact-information-way-item-text">
+                    arkadiuszschabowski&#64;gmail.com
+                  </div>
                 </div>
-                <div>
+                <div class="mat-card-contact-information-way">
+                  <div class="mat-card-contact-information-way-item">
+                    <span
+                      class="iconify"
+                      data-icon="mdi:linkedin"
+                      data-width="40"
+                    ></span>
+                  </div>
+                  <div>
+                    <a
+                      class="mat-card-contact-information-way-item-text"
+                      href="https://linkedin.com/in/arkadiusz-schabowski"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Linkedin</a
+                    >
+                  </div>
+                </div>
+                <div class="mat-card-contact-information-way">
+                  <div class="mat-card-contact-information-way-item">
+                    <span
+                      class="iconify"
+                      data-icon="mdi:github"
+                      data-width="40"
+                    ></span>
+                  </div>
                   <a
                     class="mat-card-contact-information-way-item-text"
-                    href="https://linkedin.com/in/arkadiusz-schabowski"
+                    href="https://github.com/ArkadiuszSchabowski"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Linkedin</a
+                    >Github</a
                   >
                 </div>
               </div>
-              <div class="mat-card-contact-information-way">
-                <div class="mat-card-contact-information-way-item">
-                  <span
-                    class="iconify"
-                    data-icon="mdi:github"
-                    data-width="40"
-                  ></span>
-                </div>
-                <a
-                  class="mat-card-contact-information-way-item-text"
-                  href="https://github.com/ArkadiuszSchabowski"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Github</a
-                >
-              </div>
-            </div>
-          </mat-card-content>
-        </mat-card>
+            </mat-card-content>
+          </mat-card>
+        </div>
       </div>
     </div>
   </section>
