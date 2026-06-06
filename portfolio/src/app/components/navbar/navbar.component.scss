@@ -14,14 +14,42 @@
   z-index: 999;
 }
 
-a{
-    color: white;
-    font-weight: bold;
-    padding: 5px 15px;
-    text-decoration: none;
-    font-size: 18px;
+a {
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-a:hover{
-    color: #1976D2;
+a:hover {
+  color: #1976d2;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #navbar {
+    width: 550px;
+  }
+  a {
+    font-size: 22px;
+  }
+  .desktop {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #navbar {
+    width: 580px;
+  }
+  a {
+    font-size: 26px;
+  }
+  .desktop {
+    display: flex;
+  }
 }
