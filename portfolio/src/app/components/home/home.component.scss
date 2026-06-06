@@ -167,6 +167,7 @@ textarea.home {
   width: 100%;
   height: auto;
   line-height: 1.6;
+  font-size: 20px;
 }
 
 #about-me-photo {
@@ -217,10 +218,13 @@ textarea.home {
   color: #2196f3;
 }
 
-#submit-button:hover,
 .mat-card-contact-information-way-item-text:hover,
 .hero-icon:hover {
   color: #2196f3;
+}
+
+#submit-button:hover{
+  background-color: #2196f3;
 }
 
 #card-title {
@@ -412,6 +416,7 @@ mat-card.mat-card-contact-information {
   min-width: 300px;
   height: auto;
   margin-top: 50px;
+  color: black;
 }
 
 #contact {
@@ -423,8 +428,8 @@ mat-card.mat-card-contact-information {
   flex-direction: column;
   align-items: center;
   padding: 70px 30px 20px 30px;
-  color: black;
-  background-color: silver;
+  color: white;
+  background-color: gray;
 }
 
 #mat-card-contact-container {
@@ -458,6 +463,10 @@ mat-card.mat-card-contact-information {
   font-weight: bold;
 }
 
+#card-title-skills {
+  padding: 70px 0;
+}
+
 .email-form {
   display: flex;
   width: 100%;
@@ -470,6 +479,69 @@ mat-card.mat-card-contact-information {
 
 .mat-card-contact-information-way-item {
   padding-right: 10px;
+}
+
+#skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+}
+
+#skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  height: 170px;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.skill-item:hover {
+  background-color: white;
+}
+
+.skill-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  font-size: 80px;
+  padding-top: 20px;
+}
+
+.angular-color {
+  color: #dd0031 !important;
+}
+
+.skill-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -500,6 +572,14 @@ mat-card.mat-card-contact-information {
   #contact,
   #projects {
     padding: 70px 90px;
+  }
+
+  #skills {
+    padding: 70px 50px;
+  }
+
+  #card-title-skills {
+    padding: 0 0 50px 0;
   }
 
   #about-me-container {
@@ -603,6 +683,14 @@ mat-card.mat-card-contact-information {
   #projects {
     display: flex;
     padding: 70px 200px;
+  }
+
+  #skills {
+    padding: 70px 170px;
+  }
+
+  #card-title-skills {
+    padding: 0 0 50px 0;
   }
 
   #about-me-container {
