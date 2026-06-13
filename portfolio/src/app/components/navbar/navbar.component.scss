@@ -14,7 +14,7 @@
   z-index: 999;
 }
 
-a {
+.navbar-mobile-button {
   color: white;
   font-weight: bold;
   padding: 5px 15px;
@@ -22,7 +22,7 @@ a {
   font-size: 18px;
 }
 
-a:hover {
+.navbar-mobile-button:hover {
   color: #1976d2;
 }
 
@@ -34,7 +34,7 @@ a:hover {
   #navbar {
     width: 550px;
   }
-  a {
+  .navbar-mobile-button {
     font-size: 22px;
   }
   .desktop {
@@ -46,7 +46,7 @@ a:hover {
   #navbar {
     width: 550px;
   }
-  a {
+  .navbar-mobile-button {
     font-size: 22px;
   }
   .desktop {

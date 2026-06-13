@@ -1,0 +1,173 @@
+#hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+#hero-background {
+  display: flex;
+  justify-content: right;
+  width: 100vw;
+  height: 100%;
+  min-height: 220px;
+  background-color: silver;
+}
+
+#hero-dark-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  min-height: 400px;
+  background-color: gray;
+}
+
+#hero-title-specialization {
+  padding-top: 160px;
+  font-size: 36px;
+}
+
+#hero-title {
+  text-align: center;
+  font-size: 46px;
+  padding-top: 5px;
+}
+
+#hero-avatar {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../../assets/profile.avif);
+  background-color: black;
+  margin: 70px 0 0 0;
+  border-radius: 25px;
+  border: 10px solid gray;
+}
+
+#hero-external-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 430px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  width: 100px;
+  height: 40px;
+  margin: 0;
+}
+
+.hero-tech-stack-item {
+  padding: 20px;
+}
+
+.iconify-hero {
+  color: white;
+}
+
+.hero-icon {
+  font-size: 120px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.iconify:hover {
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #hero {
+    flex-direction: row;
+  }
+
+  #hero-avatar {
+    width: 250px;
+    height: 250px;
+  }
+
+  #hero-background,
+  #hero-dark-background {
+    height: 100vh;
+  }
+
+  #hero-background {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  #hero-dark-background {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 400px;
+    border-bottom-left-radius: 25px;
+  }
+  #hero-avatar {
+    margin: 0 0 0 150px;
+  }
+  #hero-title-specialization,
+  #hero-title,
+  #hero-external-buttons {
+    padding-left: 150px;
+  }
+  #hero-title {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+  #hero-title-specialization {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero-title-specialization,
+  #hero-title,
+  #hero-external-buttons {
+    padding-left: 20%;
+  }
+  #hero-avatar {
+    margin: 0 0 0 150px;
+  }
+
+  #hero {
+    flex-direction: row;
+  }
+
+  #hero-background,
+  #hero-dark-background {
+    height: 100vh;
+  }
+
+  #hero-background {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  #hero-dark-background {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-width: 700px;
+    border-bottom-left-radius: 25px;
+  }
+
+  #hero-title {
+    padding-top: 20px;
+    font-size: 56px;
+  }
+
+  #hero-title-specialization {
+    font-size: 34px;
+  }
+}
