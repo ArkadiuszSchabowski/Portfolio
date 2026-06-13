@@ -14,6 +14,11 @@
   z-index: 999;
 }
 
+#mat-menu {
+  display: flex;
+  position: absolute;
+}
+
 .navbar-mobile-button {
   color: white;
   font-weight: bold;

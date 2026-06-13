@@ -4,136 +4,6 @@ textarea.home {
   resize: none;
 }
 
-#mat-menu {
-  display: flex;
-  position: absolute;
-}
-
-#button-menu {
-  margin: 20px 20px 0 0;
-  color: black;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-#mat-menu-icon {
-  font-size: 40px;
-  width: 40px;
-  height: 40px;
-  margin: 10px;
-  transition: color 0.3s ease-in-out;
-}
-
-#mat-menu-icon:hover {
-  color: white;
-}
-
-.email-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.message {
-  padding-top: 10px;
-}
-
-.subject {
-  padding-top: 10px;
-}
-
-.iconify {
-  color: #2196f3;
-}
-
-.mat-card-contact-information-way {
-  display: flex;
-  align-items: center;
-}
-
-.mat-card-contact-information-way-item-text {
-  font-size: 16px;
-  text-decoration: none;
-  color: #1976d2;
-}
-
-.mat-card-contact-information-way-item-text:hover,
-.hero-icon:hover {
-  color: #2196f3;
-}
-
-#submit-button:hover{
-  background-color: #2196f3;
-}
-
-#card-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  padding: 10px 0;
-  margin: 30px 0;
-  color: white;
-  background-color: #1976d2;
-}
-
-#submit-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
-
-#submit-button {
-  background-color: #1976d2;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.description {
-  padding: 30px 0;
-}
-
-.github-link {
-  padding-right: 10px;
-}
-
-.tech-stack-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14px;
-  padding: 10px;
-}
-
-.tech-stack-img {
-  width: 80px;
-  height: 80px;
-  padding-bottom: 5px;
-}
-
-.tech-stack-items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.mat-card-contact-information-title {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px 0;
-}
-
-.mat-card-contact-information-description {
-  text-align: left;
-  padding-bottom: 10px;
-  font-size: 20px;
-}
-
 mat-card.mat-card-contact-information {
   display: flex;
   width: 100%;
@@ -182,6 +52,111 @@ mat-card.mat-card-contact-information {
   flex-direction: column;
 }
 
+.email-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding-top: 10px;
+}
+
+.subject {
+  padding-top: 10px;
+}
+
+.iconify {
+  color: #2196f3;
+}
+
+.mat-card-contact-information-way {
+  display: flex;
+  align-items: center;
+}
+
+.mat-card-contact-information-way-item-text {
+  font-size: 16px;
+  text-decoration: none;
+  color: #1976d2;
+}
+
+.mat-card-contact-information-way-item-text:hover,
+.hero-icon:hover {
+  color: #2196f3;
+}
+
+#submit-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+#submit-button {
+  background-color: #1976d2;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#submit-button:hover {
+  background-color: #2196f3;
+}
+
+#contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+  margin: 30px 0;
+  color: white;
+  background-color: #1976d2;
+}
+
+.description {
+  padding: 30px 0;
+}
+
+.github-link {
+  padding-right: 10px;
+}
+
+.tech-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.tech-stack-img {
+  width: 80px;
+  height: 80px;
+  padding-bottom: 5px;
+}
+
+.tech-stack-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card-contact-information-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.mat-card-contact-information-description {
+  text-align: left;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
 .card-title-contact {
   font-size: 36px;
   font-weight: bold;
@@ -202,28 +177,20 @@ mat-card.mat-card-contact-information {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-
-  #form-component {
-    display: flex;
-    width: 100%;
-  }
-
   #contact {
     padding: 70px 90px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #contact {
-    display: flex;
-    padding: 70px 200px;
-  }
 
   #contact {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 70px 200px;
   }
+
   #mat-card-contact-container {
     flex-direction: row;
   }
