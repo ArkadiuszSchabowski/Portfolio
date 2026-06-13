@@ -43,48 +43,9 @@ textarea.home {
   flex-direction: row;
 }
 
-#home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-width: 300px;
-  height: auto;
-  padding-bottom: 20px;
-  color: white;
-  background-color: silver;
-  overflow-x: hidden;
-}
-
-#hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: auto;
-  width: 100%;
-}
-
 #mat-menu {
   display: flex;
   position: absolute;
-}
-
-#hero-background {
-  display: flex;
-  justify-content: right;
-  width: 100%;
-  min-height: 220px;
-  background-color: silver;
-}
-
-#hero-dark-background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 400px;
-  background-color: gray;
 }
 
 #projects {
@@ -118,31 +79,6 @@ textarea.home {
 
 #mat-menu-icon:hover {
   color: white;
-}
-
-#hero-avatar {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../../../assets/profile.avif);
-  background-color: black;
-  margin: 70px 0 0 0;
-  border-radius: 25px;
-  border: 10px solid gray;
-}
-
-#hero-title {
-  text-align: center;
-  font-size: 40px;
-  padding-top: 5px;
-}
-
-#hero-title-specialization {
-  padding-top: 160px;
-  font-size: 26px;
 }
 
 #about-me {
@@ -186,10 +122,6 @@ textarea.home {
   color: #2196f3;
 }
 
-.iconify-hero {
-  color: white;
-}
-
 .mat-card-contact-information-way {
   display: flex;
   align-items: center;
@@ -204,13 +136,6 @@ textarea.home {
   font-size: 50px;
   color: black;
   padding-right: 10px;
-}
-
-.hero-icon {
-  font-size: 100px;
-  padding: 15px;
-  text-decoration: none;
-  color: white;
 }
 
 .project-icon:hover {
@@ -253,27 +178,8 @@ textarea.home {
   font-weight: bold;
 }
 
-#hero-external-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 430px;
-  height: 500px;
-  margin-bottom: 20px;
-}
-
-.hero-button {
-  width: 100px;
-  height: 40px;
-  margin: 0;
-}
-
 .description {
   padding: 30px 0;
-}
-
-.hero-tech-stack-item {
-  padding: 20px;
 }
 
 .photo {
@@ -603,29 +509,6 @@ mat-card.mat-card-contact-information {
     margin-left: 5%;
   }
 
-  #hero {
-    flex-direction: row;
-  }
-
-  #hero-background,
-  #hero-dark-background {
-    height: 100vh;
-  }
-
-  #hero-background {
-    width: 300px;
-    min-width: 300px;
-  }
-
-  #hero-dark-background {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-width: 400px;
-    border-bottom-left-radius: 25px;
-  }
-
   #sport-reserve {
     margin-top: 50px;
   }
@@ -639,18 +522,6 @@ mat-card.mat-card-contact-information {
   }
   .mat-card-left-side {
     width: 40%;
-  }
-
-  #hero-avatar {
-    margin: 0 0 0 150px;
-  }
-  #hero-title-specialization,
-  #hero-title,
-  #hero-external-buttons {
-    padding-left: 150px;
-  }
-  #hero-title {
-    padding-top: 20px;
   }
 }
 
@@ -714,37 +585,6 @@ mat-card.mat-card-contact-information {
     margin-left: 5%;
   }
 
-  #hero {
-    flex-direction: row;
-  }
-
-  #hero-background,
-  #hero-dark-background {
-    height: 100vh;
-  }
-
-  #hero-background {
-    width: 300px;
-    min-width: 300px;
-  }
-
-  #hero-dark-background {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    min-width: 700px;
-    border-bottom-left-radius: 25px;
-  }
-
-  #hero-title {
-    padding-top: 20px;
-    font-size: 66px;
-  }
-
-  #hero-title-specialization {
-    font-size: 34px;
-  }
-
   #sport-reserve {
     margin-top: 50px;
   }
@@ -758,15 +598,6 @@ mat-card.mat-card-contact-information {
   }
   .mat-card-left-side {
     width: 40%;
-  }
-
-  #hero-avatar {
-    margin: 0 0 0 150px;
-  }
-  #hero-title-specialization,
-  #hero-title,
-  #hero-external-buttons {
-    padding-left: 20%;
   }
 
   #contact {
