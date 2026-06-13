@@ -1,24 +1,7 @@
 @use "@angular/material" as mat;
 
-mat-card.home {
-  height: 550px;
-}
-
 textarea.home {
   resize: none;
-}
-
-.email-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.message {
-  padding-top: 10px;
-}
-
-.subject {
-  padding-top: 10px;
 }
 
 #mat-menu {
@@ -44,6 +27,19 @@ textarea.home {
 
 #mat-menu-icon:hover {
   color: white;
+}
+
+.email-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding-top: 10px;
+}
+
+.subject {
+  padding-top: 10px;
 }
 
 .iconify {
