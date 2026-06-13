@@ -1,29 +1,28 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import {
-  ReactiveFormsModule,
-  FormBuilder,
-  Validators,
-  FormGroup,
-} from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import { CommonModule } from '@angular/common';
-import { EmailService } from '../../_services/email.service';
-import { SendEmailDto } from '../../models/send-email-dto';
+import {
+  scrollFadeLeft,
+  scrollFadeRight,
+  scrollFadeCenter,
+  scrollFadeDown,
+  scrollFadeUp,
+} from '../../animations/scroll.animations';
+import { ScrollShowDirective } from '../../directives/scroll-show.directive';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { finalize } from 'rxjs';
-import { ScrollShowDirective } from '../../directives/scroll-show.directive';
-import { scrollFadeCenter, scrollFadeDown, scrollFadeLeft, scrollFadeRight, scrollFadeUp } from '../../animations/scroll.animations';
+import { EmailService } from '../../_services/email.service';
+import { SendEmailDto } from '../../models/send-email-dto';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    CommonModule,
+  selector: 'app-contact',
+  imports: [    CommonModule,
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -31,13 +30,18 @@ import { scrollFadeCenter, scrollFadeDown, scrollFadeLeft, scrollFadeRight, scro
     MatInputModule,
     MatMenuModule,
     ReactiveFormsModule,
-    ScrollShowDirective
+    ScrollShowDirective],
+  animations: [
+    scrollFadeLeft,
+    scrollFadeRight,
+    scrollFadeCenter,
+    scrollFadeDown,
+    scrollFadeUp,
   ],
-  animations: [scrollFadeLeft, scrollFadeRight, scrollFadeCenter, scrollFadeDown, scrollFadeUp ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss',
 })
-export class HomeComponent {
+export class ContactComponent {
   form: FormGroup;
   isSending = false;
 
