@@ -154,6 +154,23 @@ mat-card-content.mat-card-project {
     align-items: center;
     text-align: center;
   }
+  mat-card.mat-card-project {
+    width: 100%;
+  }
+
+  mat-card-content.mat-card-project {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #projects,
+  #plan-your-trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   #projects {
     padding: 70px 90px;
   }
