@@ -13,7 +13,7 @@
   width: 100vw;
   height: 100%;
   min-height: 220px;
-  background-color: silver;
+  background-color: #9ca3af;
 }
 
 #hero-dark-background {
@@ -23,7 +23,7 @@
   width: 100vw;
   height: 100%;
   min-height: 400px;
-  background-color: gray;
+  background-color: #6b7280;
 }
 
 #hero-title-specialization {
@@ -48,7 +48,7 @@
   background-color: black;
   margin: 70px 0 0 0;
   border-radius: 25px;
-  border: 10px solid gray;
+  border: 10px solid #6b7280;
 }
 
 #hero-external-buttons {
@@ -122,11 +122,20 @@
     padding-left: 150px;
   }
   #hero-title {
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 20px;
-    font-size: 30px;
+    font-size: 50px;
+    padding-left: 150px;
+    padding-right: 40px;
   }
   #hero-title-specialization {
-    font-size: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 40px;
+    padding-top: 220px;
+    padding-left: 170px;
+    padding-right: 40px;
   }
 }
 
@@ -168,6 +177,7 @@
   }
 
   #hero-title-specialization {
+    padding-top: 220px;
     font-size: 34px;
   }
 }
